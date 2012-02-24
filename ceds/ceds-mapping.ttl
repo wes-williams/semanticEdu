@@ -1,0 +1,61 @@
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:            <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:            <http://www.w3.org/2002/07/owl#> .
+@prefix ceds:           <http://ceds.ed.gov/ceds/2.0#> .
+
+# STUDENT
+ceds:Student
+        rdf:type owl:Class .
+ceds:K12Student
+	rdfs:subClassOf ceds:Student .
+ceds:PSStudent
+	rdfs:subClassOf ceds:Student .
+
+# STUDENT IDENTITY
+ceds:Identity
+        rdf:type owl:Class .
+ceds:K12Identity
+	rdfs:subClassOf ceds:Identity .
+ceds:PSIdentity
+	rdfs:subClassOf ceds:Identity .
+
+# STUDENT PROPERTIES
+ceds:hasNamePrefix 
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:Identity .
+ceds:hasFirstName 
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:Identity .
+ceds:hasMiddleName 
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:Identity .
+ceds:hasLastName 
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:Identity .
+ceds:hasNamePostfix 
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:Identity .
+ceds:hasOtherName 
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:Identity .
+ceds:hasOtherNameType 
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:Identity .
+ceds:hasK12PersonalInformationVerification 
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12Identity .
+ceds:hasK12StudentIdSystem 
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12Identity .
+ceds:hasK12StudentIdentifier 
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12Identity .
+ceds:hasPSSocialSecurityNumber 
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:PSIdentity .
+ceds:hasPSStudentIdentifier 
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:PSIdentity .
+
+

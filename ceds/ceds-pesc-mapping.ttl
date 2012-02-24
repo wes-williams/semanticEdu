@@ -1,0 +1,23 @@
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:            <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:            <http://www.w3.org/2002/07/owl#> .
+@prefix ceds:           <http://ceds.ed.gov/ceds/2.0#> .
+@prefix pescCore:       <urn:org:pesc:core:CoreMain:v1.10.0#> .
+@prefix pescAcRec:      <urn:org:pesc:sector:AcademicRecord:v1.6.0#> .
+
+# PESC STUDENT
+pescAcRec:K12Student
+      	rdfs:subClassOf ceds:PSStudent .
+pescCore:hasNamePrefix 
+	rdfs:subPropertyOf ceds:hasNamePrefix .
+pescCore:hasFirstName 
+	rdfs:subPropertyOf ceds:hasFirstName .
+pescCore:hasMiddleName 
+	rdfs:subProperyOf ceds:hasMiddleName .
+pescCore:hasLastName 
+	rdfs:subPropertyOf ceds:hasLastName .
+pescCore:hasNameSuffix 
+	rdfs:subPropertyOf ceds:hasNameSuffix .
+pescCore:hasNameTitle 
+	rdfs:subPropertyOf ceds:hasNameSuffix .

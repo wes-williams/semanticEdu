@@ -1,0 +1,8 @@
+echo "Start Loading CEDS - `date`"
+curl -T ../ceds/ceds-mapping.ttl -H "Content-Type: application/x-turtle;charset=UTF-8" http://localhost:8080/openrdf-sesame/repositories/edu/statements?context=%3Chttp://ceds.ed.gov/ceds/2.0#%3E
+echo "Start Loading EdFi CEDS - `date`"
+curl -X POST -T ../ceds/ceds-edfi-mapping.ttl -H "Content-Type: application/x-turtle;charset=UTF-8" http://localhost:8080/openrdf-sesame/repositories/edu/statements?context=%3Chttp://ceds.ed.gov/ceds/2.0#%3E
+echo "Start Loading Pesc CEDS - `date`"
+curl -X POST -T ../ceds/ceds-pesc-mapping.ttl -H "Content-Type: application/x-turtle;charset=UTF-8" http://localhost:8080/openrdf-sesame/repositories/edu/statements?context=%3Chttp://ceds.ed.gov/ceds/2.0#%3E
+echo "Finished All CEDS - `date`"
+

@@ -1,0 +1,5 @@
+PREFIX ceds:<http://ceds.ed.gov/ceds/2.0#>
+
+select * where {
+?s ceds:hasFirstName ?o .
+}
