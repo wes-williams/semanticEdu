@@ -20,7 +20,7 @@ ceds:K12Identity
 ceds:PSIdentity
 	rdfs:subClassOf ceds:Identity .
 
-# STUDENT PROPERTIES
+# STUDENT INDENTITY PROPERTIES
 ceds:hasNamePrefix 
 	rdf:type owl:DatatypeProperty ;
 	rdfs:domain ceds:Identity .
@@ -58,4 +58,63 @@ ceds:hasPSStudentIdentifier
 	rdf:type owl:DatatypeProperty ;
 	rdfs:domain ceds:PSIdentity .
 
+# STUDENT CONTACT
+ceds:Contact
+	rdf:type owl:Class .
+ceds:ContactPhone
+	rdf:type owl:Class .
+ceds:K12Contact
+	rdfs:subClassOf ceds:Contact .
+ceds:K12ContactEmail
+	rdf:type owl:Class .
+ceds:PSContact
+	rdfs:subClassOf ceds:Contact .
 
+# STUDENT CONTACT PROPERTIES
+ceds:hasRoomOrSuiteNumber
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:Contact .
+ceds:hasCity
+	rdf:type owl:DatatypePropery ;
+	rdfs:domain ceds:Contact .
+ceds:hasCountyName
+	rdf:type owl:DatatypePropery ;
+	rdfs:domain ceds:Contact .
+ceds:hasPostalCode
+	rdf:type owl:DatatypePropery ;
+	rdfs:domain ceds:Contact .
+ceds:hasStreetNumberAndName
+	rdf:type owl:DatatypePropery ;
+	rdfs:domain ceds:Contact .
+ceds:hasAddressTypeForLearner
+	rdf:type owl:DatatypePropery ;
+	rdfs:domain ceds:Contact .
+ceds:hasCountryCode
+	rdf:type owl:DatatypePropery ;
+	rdfs:domain ceds:Contact .
+ceds:hasState
+	rdf:type owl:DatatypePropery ;
+	rdfs:domain ceds:Contact .
+ceds:hasPhone
+	rdf:type owl:ObjectPropery ;
+	rdfs:domain ceds:Contact ;
+	rdfs:range ceds:ContactPhone .
+ceds:hasPrimaryPhoneIndicator
+	rdf:type owl:DatatypePropery ;
+	rdfs:domain ceds:ContactPhone .
+ceds:hasPhoneNumber
+	rdf:type owl:DatatypePropery ;
+	rdfs:domain ceds:ContactPhone .
+ceds:hasPhoneType
+	rdf:type owl:DatatypePropery ;
+	rdfs:domain ceds:ContactPhone .
+ceds:hasK12Email
+	rdf:type owl:ObjectPropery ;
+	rdfs:domain ceds:K12Contact ;
+	rdfs:range ceds:K12ContactEmail .
+ceds:hasEmailAddress
+	rdf:type owl:DatatypePropery ;
+	rdfs:domain ceds:K12ContactEmail .
+ceds:hasEmailAddressType
+	rdf:type owl:DatatypePropery ;
+	rdfs:domain ceds:K12ContactEmail .

@@ -8,6 +8,7 @@
 # ED-FI STUDENT
 edFi:Student
       	rdfs:subClassOf ceds:K12Student .
+# IDENTITY
 edFi:PersonalTitlePrefix
       	rdfs:subPropertyOf ceds:hasNamePrefix .
 edFi:hasFirstName 
@@ -18,3 +19,28 @@ edFi:hasLastSurname
 	rdfs:subPropertyOf ceds:hasLastName .
 edFi:hasGenerationCodeSuffix 
 	rdfs:subPropertyOf ceds:hasNameSuffix .
+# CONTACT
+edFi:hasStreetNumberName
+	rdfs:subPropertyOf ceds:hasStreetNumberAndName .
+edFi:hasApartmentRoomSuiteNumber
+	rdfs:subPropertyOf ceds:hasRoomOrSuiteNumber .
+edFi:hasCity
+	rdfs:subPropertyOf ceds:hasCity .
+edFi:hasStateAbbreviation
+	rdfs:subPropertyOf ceds:hasState .
+edFi:hasPostalCode
+	rdfs:subPropertyOf ceds:hasPostalCode .
+edFi:hasNameOfCounty
+	rdfs:subPropertyOf ceds:hasCountyName .
+edFi:hasCountryCode
+	rdfs:subPropertyOf ceds:hasCountryCode .
+edFi:hasAddressType
+	rdfs:subPropertyOf ceds:hasAddressTypeForLearner .
+edFi:hasTelephoneNumber
+	rdfs:subPropertyOf ceds:hasPhone .
+edFi:hasTelephoneNumberType
+	rdfs:subPropertyOf ceds:hasPhoneType .
+edFi:hasElectronicMail
+	rdfs:subPropertyOf ceds:hasEmail .
+edFi:hasElectronicMailType
+	rdfs:subPropertyOf ceds:hasEmailType .
