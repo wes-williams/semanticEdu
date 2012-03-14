@@ -8,7 +8,10 @@
 
 # PESC STUDENT
 pescAcRec:K12Student
+      	rdfs:subClassOf ceds:K12Student .
+pescAcRec:Student
       	rdfs:subClassOf ceds:PSStudent .
+# IDENTITY
 pescCore:hasNamePrefix 
 	rdfs:subPropertyOf ceds:hasNamePrefix .
 pescCore:hasFirstName 
@@ -21,3 +24,24 @@ pescCore:hasNameSuffix
 	rdfs:subPropertyOf ceds:hasNameSuffix .
 pescCore:hasNameTitle 
 	rdfs:subPropertyOf ceds:hasNameSuffix .
+# CONTACT
+pescCore:hasAddressLine
+        rdfs:subPropertyOf ceds:hasStreetNumberAndName .
+pescCore:hasCity
+        rdfs:subPropertyOf ceds:hasCity .
+# Domestic
+pescCore:hasStateProvinceCode
+        rdfs:subPropertyOf ceds:hasState .
+pescCore:hasPostalCode
+        rdfs:subPropertyOf ceds:hasPostalCode .
+# International
+pescCore:hasStateProvince
+        rdfs:subPropertyOf ceds:hasState .
+pescCore:hasCountryCode
+        rdfs:subPropertyOf ceds:hasCountryCode .
+# Phone is actually multiple parts
+pescCore:hasPhoneNumber
+        rdfs:subPropertyOf ceds:hasPhone .
+pescCore:hasEmailAddress
+        rdfs:subPropertyOf ceds:hasEmail .
+
