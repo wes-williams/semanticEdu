@@ -3,3 +3,56 @@ PREFIX ceds:<http://ceds.ed.gov/ceds/2.0#>
 select * where {
 ?s ceds:hasFirstName ?o .
 }
+
+PREFIX nedm:<http://localhost/EdDataModel#>
+
+select * where {
+?s nedm:firstName ?o .
+}
+
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX nedm:<http://localhost/EdDataModel#>
+
+select ?s ?p ?o where {
+?p rdf:type nedm:PersonCharacteristic .
+?s ?p ?o .
+}
+
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX nedm:<http://localhost/EdDataModel#>
+
+select ?s ?p ?o ?t where {
+?p rdf:type nedm:PersonCharacteristic .
+?s ?p ?o .
+?s rdf:type ?t .
+}
+
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ceds:<http://ceds.ed.gov/ceds/2.0#>
+
+select ?s ?p ?o where {
+?s rdf:type ceds:Identity .
+?s ?p ?o .
+}
+
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ceds:<http://ceds.ed.gov/ceds/2.0#>
+
+select distinct ?s ?p ?o where {
+?s rdf:type ceds:Identity .
+?p rdf:type owl:DatatypeProperty .
+?s ?p ?o .
+}
+
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ceds:<http://ceds.ed.gov/ceds/2.0#>
+
+select distinct ?s ?p ?o ?t where {
+?s rdf:type ceds:Identity .
+?s rdf:type ?t .
+?p rdf:type owl:DatatypeProperty .
+?s ?p ?o .
+}
+

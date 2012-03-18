@@ -1,0 +1,42 @@
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:            <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:            <http://www.w3.org/2002/07/owl#> .
+@prefix ceds:           <http://ceds.ed.gov/ceds/2.0#> .
+@prefix nedm:           <http://localhost/EdDataModel#> .
+
+# STUDENT
+ceds:K12Student 
+	rdfs:subClassOf nedm:studentElementarySecondary .
+ceds:PSStudent 
+	rdfs:subClassOf nedm:studentPostsecondary .
+
+# IDENTITY
+ceds:hasNamePrefix 
+	rdfs:subPropertyOf nedm:prefixName .
+ceds:hasFirstName 
+	rdfs:subPropertyOf nedm:firstName .
+ceds:hasMiddleName 
+	rdfs:subPropertyOf nedm:middleName .
+ceds:hasLastName 
+	rdfs:subPropertyOf nedm:lastNameOrSurname .
+ceds:hasNameSuffix 
+	rdfs:subPropertyOf nedm:generationCodeSuffix .
+
+# CONTACT
+ceds:hasStreetNumberAndName 
+	rdfs:subPropertyOf nedm:streetAddress .
+ceds:hasCity 
+	rdfs:subPropertyOf nedm:city .
+ceds:hasState 
+	rdfs:subPropertyOf nedm:state .
+ceds:hasPostalCode 
+	rdfs:subPropertyOf nedm:zipCode .
+ceds:hasCountyName 
+	rdfs:subPropertyOf nedm:county .
+ceds:hasCountryCode 
+	rdfs:subPropertyOf nedm:country .
+ceds:hasPhone 
+	rdfs:subPropertyOf nedm:phoneNumber .
+ceds:hasEmail 
+	rdfs:subPropertyOf nedm:e-mailAddress .
