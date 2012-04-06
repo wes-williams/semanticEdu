@@ -6,7 +6,7 @@
 
 # STUDENT
 ceds:Student
-        rdf:type owl:Class .
+	rdf:type owl:Class .
 ceds:K12Student
 	rdfs:subClassOf ceds:Student .
 ceds:PSStudent
@@ -14,13 +14,13 @@ ceds:PSStudent
 
 # STUDENT IDENTITY
 ceds:Identity
-        rdf:type owl:Class .
+	rdf:type owl:Class .
 ceds:K12Identity
 	rdfs:subClassOf ceds:Identity .
 ceds:PSIdentity
 	rdfs:subClassOf ceds:Identity .
 
-# STUDENT INDENTITY PROPERTIES
+# STUDENT IDENTITY PROPERTIES
 ceds:hasNamePrefix 
 	rdf:type owl:DatatypeProperty ;
 	rdfs:domain ceds:Identity .
@@ -75,46 +75,209 @@ ceds:hasRoomOrSuiteNumber
 	rdf:type owl:DatatypeProperty ;
 	rdfs:domain ceds:Contact .
 ceds:hasCity
-	rdf:type owl:DatatypePropery ;
+	rdf:type owl:DatatypeProperty ;
 	rdfs:domain ceds:Contact .
 ceds:hasCountyName
-	rdf:type owl:DatatypePropery ;
+	rdf:type owl:DatatypeProperty ;
 	rdfs:domain ceds:Contact .
 ceds:hasPostalCode
-	rdf:type owl:DatatypePropery ;
+	rdf:type owl:DatatypeProperty ;
 	rdfs:domain ceds:Contact .
 ceds:hasStreetNumberAndName
-	rdf:type owl:DatatypePropery ;
+	rdf:type owl:DatatypeProperty ;
 	rdfs:domain ceds:Contact .
 ceds:hasAddressTypeForLearner
-	rdf:type owl:DatatypePropery ;
+	rdf:type owl:DatatypeProperty ;
 	rdfs:domain ceds:Contact .
 ceds:hasCountryCode
-	rdf:type owl:DatatypePropery ;
+	rdf:type owl:DatatypeProperty ;
 	rdfs:domain ceds:Contact .
 ceds:hasState
-	rdf:type owl:DatatypePropery ;
+	rdf:type owl:DatatypeProperty ;
 	rdfs:domain ceds:Contact .
 ceds:hasPhone
-	rdf:type owl:ObjectPropery ;
+	rdf:type owl:ObjectProperty ;
 	rdfs:domain ceds:Contact ;
 	rdfs:range ceds:ContactPhone .
 ceds:hasPrimaryPhoneIndicator
-	rdf:type owl:DatatypePropery ;
+	rdf:type owl:DatatypeProperty ;
 	rdfs:domain ceds:ContactPhone .
 ceds:hasPhoneNumber
-	rdf:type owl:DatatypePropery ;
+	rdf:type owl:DatatypeProperty ;
 	rdfs:domain ceds:ContactPhone .
 ceds:hasPhoneType
-	rdf:type owl:DatatypePropery ;
+	rdf:type owl:DatatypeProperty ;
 	rdfs:domain ceds:ContactPhone .
 ceds:hasK12Email
-	rdf:type owl:ObjectPropery ;
+	rdf:type owl:ObjectProperty ;
 	rdfs:domain ceds:K12Contact ;
 	rdfs:range ceds:K12ContactEmail .
 ceds:hasEmailAddress
-	rdf:type owl:DatatypePropery ;
+	rdf:type owl:DatatypeProperty ;
 	rdfs:domain ceds:K12ContactEmail .
 ceds:hasEmailAddressType
-	rdf:type owl:DatatypePropery ;
+	rdf:type owl:DatatypeProperty ;
 	rdfs:domain ceds:K12ContactEmail .
+
+# ACADEMIC RECORD
+ceds:AcademicRecord
+	rdf:type owl:Class .
+ceds:K12AcademicRecord
+	rdfs:subClassOf ceds:AcademicRecord .
+ceds:PSAcademicRecord
+	rdfs:subClassOf ceds:AcademicRecord .
+
+# ACADEMIC RECORD PROPERTIES
+ceds:hasAcademicHonorsType
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasCareerAndTechnicalEducationCompleter
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasClassRankingDate
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasCohortDescription
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasCourseCodeSystem
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasCourseIdentifier
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasCourseRepeatCode
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasCourseRepeatCode
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasCourseTitle
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasCreditTypeEarned
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasCreditsAttemptedCumulative
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasDiplomaOrCredentialAwardDate
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasEndOfTermStatus
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasGradeEarned
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasGradeLevelWhenCourseTaken
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasGradePointAverageCumulative
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasGradePointAverageGivenSession
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasGradePointsEarnedCumulative
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasGradeValueQualifier
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasGraduationRateSurveyCohortYear
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasGraduationRateSurveyIndicator
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasHighSchoolDiplomaDistinctionType
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasHighSchoolDiplomaType
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasHonorsDescription
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasIncludedInAdequateYearlyProgressCalculation
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasLiteracyGoalMetStatus
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:LiteracyPostTestStatus
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasLiteracyPreTestStatus
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasMarkingPeriod
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasMidTermMark
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasNonpromotionReason
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasNumberOfCreditsAttempted
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasNumberOfCreditsEarned
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasPostsecondaryEnrollmentAction
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasPreandPostTestIndicator
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasPretestResults
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasProficiencyStatus
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasProgressLevel
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasProjectedGraduationDate
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasPromotionReason
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasRecognitionForParticipationOrPerformanceInAnActivity
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasStudentClassRank
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasTotalNumberInClass
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:K12AcademicRecord .
+ceds:hasAcademicAwardDate
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:PSAcademicRecord .
+ceds:hasAcademicAwardLevelConferred
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:PSAcademicRecord .
+ceds:hasAcademicAwardTitle
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:PSAcademicRecord .
+ceds:hasAdvancedPlacementCreditsAwarded
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:PSAcademicRecord .
+ceds:hasDiplomaOrCredentialAwardDate
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:PSAcademicRecord .
+ceds:hasDualCreditDualEnrollmentCreditsAwarded
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:PSAcademicRecord .
+ceds:hasGradePointAverage
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:PSAcademicRecord .
+ceds:hasGradePointAverageCumulative
+	rdf:type owl:DatatypeProperty ;
+	rdfs:domain ceds:PSAcademicRecord .
