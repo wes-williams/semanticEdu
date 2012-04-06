@@ -175,7 +175,8 @@ ceds:hasGradeLevelWhenCourseTaken
 	rdfs:domain ceds:K12AcademicRecord .
 ceds:hasGradePointAverageCumulative
 	rdf:type owl:DatatypeProperty ;
-	rdfs:domain ceds:K12AcademicRecord .
+	rdfs:domain ceds:K12AcademicRecord ;
+	rdfs:domain ceds:PSAcademicRecord .
 ceds:hasGradePointAverageGivenSession
 	rdf:type owl:DatatypeProperty ;
 	rdfs:domain ceds:K12AcademicRecord .
@@ -276,8 +277,5 @@ ceds:hasDualCreditDualEnrollmentCreditsAwarded
 	rdf:type owl:DatatypeProperty ;
 	rdfs:domain ceds:PSAcademicRecord .
 ceds:hasGradePointAverage
-	rdf:type owl:DatatypeProperty ;
-	rdfs:domain ceds:PSAcademicRecord .
-ceds:hasGradePointAverageCumulative
 	rdf:type owl:DatatypeProperty ;
 	rdfs:domain ceds:PSAcademicRecord .
