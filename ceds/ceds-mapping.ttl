@@ -149,9 +149,6 @@ ceds:hasCourseIdentifier
 ceds:hasCourseRepeatCode
 	rdf:type owl:DatatypeProperty ;
 	rdfs:domain ceds:K12AcademicRecord .
-ceds:hasCourseRepeatCode
-	rdf:type owl:DatatypeProperty ;
-	rdfs:domain ceds:K12AcademicRecord .
 ceds:hasCourseTitle
 	rdf:type owl:DatatypeProperty ;
 	rdfs:domain ceds:K12AcademicRecord .

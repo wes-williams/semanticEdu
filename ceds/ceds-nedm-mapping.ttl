@@ -40,3 +40,7 @@ ceds:hasPhone
 	rdfs:subPropertyOf nedm:phoneNumber .
 ceds:hasEmail 
 	rdfs:subPropertyOf nedm:e-mailAddress .
+
+# STUDENT ACADEMIC RECORD
+ceds:AcademicRecord
+	rdfs:subClassOf nedm:studentAcademicRecord .

@@ -7,10 +7,10 @@
 
 # ED-FI STUDENT
 edFi:Student
-      	rdfs:subClassOf ceds:K12Student .
+	rdfs:subClassOf ceds:K12Student .
 # IDENTITY
 edFi:PersonalTitlePrefix
-      	rdfs:subPropertyOf ceds:hasNamePrefix .
+	rdfs:subPropertyOf ceds:hasNamePrefix .
 edFi:hasFirstName 
 	rdfs:subPropertyOf ceds:hasFirstName .
 edFi:hasMiddleName 

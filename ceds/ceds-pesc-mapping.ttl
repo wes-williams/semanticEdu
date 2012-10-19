@@ -8,9 +8,10 @@
 
 # PESC STUDENT
 pescAcRec:K12Student
-      	rdfs:subClassOf ceds:K12Student .
+	rdfs:subClassOf ceds:K12Student .
 pescAcRec:Student
-      	rdfs:subClassOf ceds:PSStudent .
+	rdfs:subClassOf ceds:PSStudent .
+
 # IDENTITY
 pescCore:hasNamePrefix 
 	rdfs:subPropertyOf ceds:hasNamePrefix .
@@ -24,24 +25,74 @@ pescCore:hasNameSuffix
 	rdfs:subPropertyOf ceds:hasNameSuffix .
 pescCore:hasNameTitle 
 	rdfs:subPropertyOf ceds:hasNameSuffix .
+
 # CONTACT
 pescCore:hasAddressLine
-        rdfs:subPropertyOf ceds:hasStreetNumberAndName .
+	rdfs:subPropertyOf ceds:hasStreetNumberAndName .
 pescCore:hasCity
-        rdfs:subPropertyOf ceds:hasCity .
+	rdfs:subPropertyOf ceds:hasCity .
 # Domestic
 pescCore:hasStateProvinceCode
-        rdfs:subPropertyOf ceds:hasState .
+	rdfs:subPropertyOf ceds:hasState .
 pescCore:hasPostalCode
-        rdfs:subPropertyOf ceds:hasPostalCode .
+	rdfs:subPropertyOf ceds:hasPostalCode .
 # International
 pescCore:hasStateProvince
-        rdfs:subPropertyOf ceds:hasState .
+	rdfs:subPropertyOf ceds:hasState .
 pescCore:hasCountryCode
-        rdfs:subPropertyOf ceds:hasCountryCode .
+	rdfs:subPropertyOf ceds:hasCountryCode .
 # Phone is actually multiple parts
 pescCore:hasPhoneNumber
-        rdfs:subPropertyOf ceds:hasPhone .
+	rdfs:subPropertyOf ceds:hasPhone .
 pescCore:hasEmailAddress
-        rdfs:subPropertyOf ceds:hasEmail .
+	rdfs:subPropertyOf ceds:hasEmail .
+
+# ACADEMIC RECORD
+pescAcRec:AcademicRecord
+	rdfs:subClassOf ceds:PSAcademicRecord .
+pescAcRec:K12AcademicRecord
+	rdfs:subClassOf ceds:K12AcademicRecord .
+
+# The following are just adding a layer of abstraction
+# Making them subClassOf AcademicRecord will collapse the abstraction
+pescAcRec:AcademicAward
+	rdfs:subClassOf ceds:AcademicRecord .
+pescAcRec:AcademicSummaryF
+	rdfs:subClassOf ceds:AcademicRecord .
+
+# ACADEMIC RECORD PROPERTIES
+pescCore:hasHonorsTitle
+	rdfs:subPropertyOf ceds:hasAcademicHonorsType .
+
+pescAcRec:hasClassRankDate
+	rdfs:subPropertyOf ceds:hasClassRankingDate .
+
+pescAcRec:hasCohortYear
+	rdfs:subPropertyOf ceds:hasCohortDescription .
+
+# need to imply the 3 or 4 letter course code system when these are used
+pescAcRec:hasCourseCIPCode
+	rdfs:subPropertyOf ceds:hasCourseCodeSystem .
+pescAcRec:hasCourseUSISCode
+	rdfs:subPropertyOf ceds:hasCourseCodeSystem .
+pescAcRec:hasCourseNCESCode
+	rdfs:subPropertyOf ceds:hasCourseCodeSystem .
+pescAcRec:hasCourseSCEDCode
+	rdfs:subPropertyOf ceds:hasCourseCodeSystem .
+
+pescAcRec:hasCourseNumber
+	rdfs:subPropertyOf ceds:hasCourseIdentifier .
+
+pescAcRec:hasCourseRepeatCode
+	rdfs:subPropertyOf ceds:hasCourseRepeatCode .
+
+pescAcRec:hasCourseTitle
+	rdfs:subPropertyOf ceds:hasCourseTitle .
+
+pescAcRec:hasCourseCreditEarned
+	rdfs:subPropertyOf ceds:hasCreditTypeEarned .
+
+pescAcRec:hasCourseCreditValue
+	rdfs:subPropertyOf ceds:hasCreditsAttemptedCumulative .
+
 
